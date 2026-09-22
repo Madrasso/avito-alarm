@@ -1,0 +1,9 @@
+{
+  "name": "avito-alarm",
+  "version": "1.2.3",
+  "private": true,
+  "description": "Локальное Chrome/Edge расширение для звуковых уведомлений Авито",
+  "scripts": {
+    "test": "node --test"
+  }
+}

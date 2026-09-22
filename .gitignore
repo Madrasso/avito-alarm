@@ -1,0 +1,15 @@
+# Dependencies and local tooling
+node_modules/
+.idea/
+.vscode/
+
+# Local extension packages and signing keys
+*.7z
+*.zip
+*.crx
+*.pem
+
+# OS files and logs
+.DS_Store
+Thumbs.db
+*.log

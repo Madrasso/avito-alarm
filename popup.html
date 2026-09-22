@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Avito Alarm</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header class="brand-header">
+        <div class="brand-lockup">
+          <span class="brand-mark"><img src="assets/icons/icon-64.png" alt=""></span>
+          <span class="brand-name">mdx <b>scripts</b></span>
+        </div>
+        <div class="header-grid">
+          <div>
+            <p class="eyebrow">[ СИСТЕМА / AVITO ALARM ]</p>
+            <h1>Сообщения<br>под контролем.</h1>
+          </div>
+          <label class="switch" title="Включить мониторинг">
+            <input id="enabled" type="checkbox">
+            <span></span>
+          </label>
+        </div>
+        <div class="route-line" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="status-card" aria-live="polite">
+          <div class="section-label"><span id="statusDot" class="status-dot"></span> СОСТОЯНИЕ</div>
+          <strong id="statusTitle">Загрузка…</strong>
+          <p id="statusDetail">Получение состояния расширения</p>
+        </section>
+
+        <section class="settings-panel">
+          <div class="section-label">[ ПАРАМЕТРЫ СИГНАЛА ]</div>
+
+          <label class="field">
+            <span>Звук</span>
+            <select id="soundId">
+              <option value="chime">Колокольчик</option>
+              <option value="double">Двойной сигнал</option>
+              <option value="alert">Тревожный</option>
+            </select>
+          </label>
+
+          <label class="field range-field">
+            <span>Громкость <output id="volumeValue">75%</output></span>
+            <input id="volume" type="range" min="0" max="100" step="5" value="75">
+            <span class="range-scale"><small>0</small><small>100</small></span>
+          </label>
+
+          <label class="field range-field">
+            <span>Таймер повтора <output id="repeatIntervalValue">15 с</output></span>
+            <input id="repeatInterval" type="range" min="2" max="20" step="1" value="15">
+            <span class="range-scale"><small>2 с</small><small>20 с</small></span>
+          </label>
+        </section>
+
+        <div class="actions">
+          <button id="testSound" type="button">Проверить звук</button>
+          <button id="openMonitor" type="button" class="secondary">Открыть сообщения</button>
+        </div>
+
+        <p id="error" class="error" hidden></p>
+        <footer>ЛОКАЛЬНО · БЕЗ API · 2026 / 01</footer>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
